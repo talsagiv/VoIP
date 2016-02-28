@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SIP.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SIP.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SIP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="10" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+            <state line="8" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.23011844" vertical-offset="0" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SIP server.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SIP server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SIP Server/SIP server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="16" selection-start="1202" selection-end="1202" vertical-scroll-proportion="1.1218274" vertical-offset="204" max-vertical-offset="1054">
+            <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1054">
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -55,6 +55,7 @@
       <list>
         <option value="$PROJECT_DIR$/VoIP Client.py" />
         <option value="$PROJECT_DIR$/SIP Server/SIP server.py" />
+        <option value="$PROJECT_DIR$/SIP.py" />
       </list>
     </option>
   </component>
@@ -308,19 +309,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SIP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="10" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SIP Server/SIP server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="16" selection-start="1202" selection-end="1202" vertical-scroll-proportion="1.1218274" vertical-offset="204" max-vertical-offset="1054">
+        <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SIP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.23011844" vertical-offset="0" max-vertical-offset="646">
+          <folding />
         </state>
       </provider>
     </entry>

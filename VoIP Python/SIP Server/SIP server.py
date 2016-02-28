@@ -42,8 +42,8 @@ def run_select():
                 else:
                     pass
 
-        #send messages
-        send_waiting_messages(wlist)
+    #send messages
+    send_waiting_messages(wlist)
 
 
 
