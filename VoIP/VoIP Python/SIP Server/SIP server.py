@@ -50,7 +50,7 @@ def lgn(lst, soc):
 
 #disconnect
 def dis(soc):
-    cur.execute("UPDATE USERS set ONLINE = FALSE where ADDR=" + soc.getsockname()[0] + "")
+    cur.execute("UPDATE USERS set ONLINE=FALSE where ADDR=" + soc.getsockname()[0] + "")
     cur.commit()
 
 #invitation to a call function
@@ -69,10 +69,14 @@ def bye(lst):
 
 
 #return connected users
-def usr(lst):
-    pass
-
-
+def usr(lst, soc):
+    cur.execute("SELECT NAME FROM USERS WHERE ONLINE=TRUE")
+    users = cur.fetchall()
+    message = ""
+    for user in users:
+        message += base64.b64encode(user) + "|"
+    message = message[:-1]
+    messages_to_send.append((soc, message))
 
 
 

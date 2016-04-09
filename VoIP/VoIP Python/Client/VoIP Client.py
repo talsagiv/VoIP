@@ -9,19 +9,20 @@ from Tkinter import *
 #globals
 audio = Audio.Audio(CHANNELS=1,FORMAT=pyaudio.paInt16, RATE=44100, CHUNK=32, NOFFRAMES=0.2)
 sock_server = socket.socket()
-sock_server.connect(("127.0.0.1", 40)) #server ip
+sock_server.connect(("127.0.0.1", 23)) #server ip
+
 
 
 
 #get name and pass from gui, reg to the server and check if successful
 def reg(x):
     def commitreg():
-        regGUI.destroy()
         name = namevar.get()
         password = passwordvar.get()
         datatosend = "reg|"+base64.b64encode(name)+"|"+base64.b64encode(password)
         sock_server.send(datatosend)
         answer = sock_server.recv(1024)
+        regGUI.destroy()
         if answer[:7] is "SUCCEED":
             pass #TODO add after reg
         else:
@@ -44,12 +45,12 @@ def reg(x):
 
 def lgn(x):
     def commitlgn():
-        lgnGUI.destroy()
         name = namevar.get()
         password = passwordvar.get()
         datatosend = "lgn|"+base64.b64encode(name)+"|"+base64.b64encode(password)
         sock_server.send(datatosend)
         answer = sock_server.recv(1024)
+        lgnGUI.destroy()
         if answer[:7] is "SUCCEED":
             pass #TODO add after lgn
         else:
@@ -63,9 +64,9 @@ def lgn(x):
         problem = Label(master=lgnGUI, text='Incorrect details').pack()
     passwordvar = StringVar()
     namelable = Label(master=lgnGUI, text='Name:').pack()
-    nameentry = Entry(master=lgnGUI, textvariable= namevar).pack()
+    nameentry = Entry(master=lgnGUI, textvariable=namevar).pack()
     passlable = Label(master=lgnGUI, text='Password:').pack()
-    passentry = Entry(master=lgnGUI, textvariable= passwordvar).pack()
+    passentry = Entry(master=lgnGUI, textvariable=passwordvar).pack()
     button = Button(master = lgnGUI, text="Connect", command=commitlgn).pack()
     lgnGUI.mainloop()
 
@@ -74,12 +75,14 @@ def lgn(x):
 
 
 def main():
+    '''
     #get the ip addr from the gui and start conversation
     def start_talk():
         ip = ip_addr.get()
         print ip
         thread.start_new_thread(send_audio(ip))
         #thread.start_new_thread(receive_audio(ip))
+
 
     #GUI
     GUI = Tk()
@@ -88,7 +91,14 @@ def main():
     GUI.title("VOIP")
     ip_entry = Entry(GUI, textvariable=ip_addr).pack()
     button = Button(GUI, text="Connect", command=start_talk).pack()
+    GUI.mainloop()'''
+
+    GUI = Tk()
+    regbutton = Button(GUI, text="register", command=lambda :reg("normal")).pack()
+    lgnbutton = Button(GUI, text="login", command=lambda :lgn("normal")).pack()
     GUI.mainloop()
+
+
 
 
 #function to handle recording audio and sending it
